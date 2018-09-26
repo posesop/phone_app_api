@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "start:dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,16 @@
   "bugs": {
     "url": "https://github.com/posesop/phone_app_api/issues"
   },
-  "homepage": "https://github.com/posesop/phone_app_api#readme"
+  "homepage": "https://github.com/posesop/phone_app_api#readme",
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "nodemon": "^1.18.4",
+    "response-time": "^2.3.2",
+    "restify": "^7.2.1",
+    "restify-health-router": "^1.0.3",
+    "restify-router": "^0.5.0"
+  }
 }
