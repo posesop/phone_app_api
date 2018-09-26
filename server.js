@@ -7,7 +7,6 @@ const log = require('./app/config/log');
 
 const routes = require('./app/routes');
 const controllers = require('./app/controllers');
-// const repository = require('./src/repository');
 
 const init = () => {
   const server = restify.createServer({
