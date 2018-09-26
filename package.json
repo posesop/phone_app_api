@@ -11,13 +11,14 @@
     "type": "git",
     "url": "git+https://github.com/posesop/phone_app_api.git"
   },
-  "author": "",
+  "author": "Victor Pose",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/posesop/phone_app_api/issues"
   },
   "homepage": "https://github.com/posesop/phone_app_api#readme",
   "dependencies": {
+    "ajv": "^6.5.4",
     "bunyan": "^1.8.12",
     "eslint": "^5.6.0",
     "eslint-config-airbnb-base": "^13.1.0",
