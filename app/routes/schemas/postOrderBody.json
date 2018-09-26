@@ -45,18 +45,7 @@
       "additionalProperties": false,
       "items": {
         "$id": "/properties/phones/items",
-        "type": "object",
-        "required": [
-          "name"
-        ],
-        "additionalProperties": false,
-        "properties": {
-          "name": {
-            "$id": "/properties/phones/items/properties/name",
-            "type": "string",
-            "minLength": 1
-          }
-        }
+        "type": "string"
       }
     }
   }
