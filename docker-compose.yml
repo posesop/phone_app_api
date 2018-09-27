@@ -2,11 +2,19 @@ version: '3'
 services:
   mysql:
     image: mysql:5.7
-  app:
+  phones:
     build:
-      context: .
+      context: ./phones
       dockerfile: Dockerfile
     env_file:
-      - .env
+      - ./phones/.env
     ports:
       - "8080:3000"
+  orders:
+    build:
+      context: ./orders
+      dockerfile: Dockerfile
+    env_file:
+      - ./orders/.env
+    ports:
+      - "8081:3001"

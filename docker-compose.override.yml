@@ -11,11 +11,21 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     volumes:
       - ./bbdd/bbdd.sql:/docker-entrypoint-initdb.d/bbdd.sql
-  app:
+  phones:
     command: npm run start:dev
     volumes:
-      - ./app:/usr/src/app/app
-      - ./package.json:/usr/src/app/package.json
-      - ./server.js:/usr/src/app/server.js
+      - ./phones:/usr/src/app
+      - ./phones/package.json:/usr/src/app/package.json
+      - ./phones/server.js:/usr/src/app/server.js
+    depends_on:
+      - mysql
+  orders:
+    environment:
+      PHONES_HOST: http://phones:3000
+    command: npm run start:dev
+    volumes:
+      - ./orders:/usr/src/app
+      - ./orders/package.json:/usr/src/app/package.json
+      - ./orders/server.js:/usr/src/app/server.js
     depends_on:
       - mysql

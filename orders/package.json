@@ -1,0 +1,52 @@
+{
+  "name": "orders_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run documentation && node server.js",
+    "start:dev": "npm run documentation && nodemon server.js",
+    "lint": "./node_modules/.bin/eslint .",
+    "documentation": "raml2html -i ./api/api.raml -o index.html",
+    "clean": "rm -rf coverage",
+    "test": "mocha --recursive --reporter mocha-multi-reporters --reporter-options configFile=./mocha-config.json",
+    "coverage": "npm run clean; nyc npm test; rm -rf .nyc_output",
+    "readme": "node-readme && git add README.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/posesop/phone_app_api.git"
+  },
+  "author": "Victor Pose",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/posesop/phone_app_api/issues"
+  },
+  "homepage": "https://github.com/posesop/phone_app_api#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "mocha": "^5.2.0",
+    "mocha-junit-reporter": "^1.18.0",
+    "mocha-multi-reporters": "^1.1.7",
+    "node-readme": "^0.1.9",
+    "nodemon": "^1.18.4",
+    "nyc": "^13.0.1",
+    "sinon": "^6.3.4"
+  },
+  "dependencies": {
+    "ajv": "^6.5.4",
+    "axios": "^0.18.0",
+    "bunyan": "^1.8.12",
+    "mysql": "^2.16.0",
+    "raml2html": "^7.2.0",
+    "response-time": "^2.3.2",
+    "restify": "^7.2.1",
+    "restify-errors": "^6.1.1",
+    "restify-health-router": "^1.0.3",
+    "restify-router": "^0.5.0",
+    "sqlify": "^2.4.0"
+  }
+}
