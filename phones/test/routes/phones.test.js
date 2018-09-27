@@ -24,7 +24,7 @@ describe('Unit test for phones route', () => {
       internalErrorStub.restore();
     });
 
-    it.only('should catch and call next with Internal error if controller throws error', async () => {
+    it('should catch and call next with Internal error if controller throws error', async () => {
       const req = {};
       const error = new Error('random error');
       const getPhones = () => {
