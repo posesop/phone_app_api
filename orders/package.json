@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "start:dev": "nodemon server.js",
+    "start": "npm run documentation && node server.js",
+    "start:dev": "npm run documentation && nodemon server.js",
     "lint": "./node_modules/.bin/eslint .",
     "documentation": "raml2html -i ./api/api.raml -o index.html",
     "clean": "rm -rf coverage",

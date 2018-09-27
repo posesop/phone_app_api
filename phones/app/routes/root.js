@@ -6,13 +6,6 @@ exports.get = (req, res, next) => {
       href: `http://${req.headers.host}/phones`,
     },
   }, {
-    id: 'orders',
-    link: {
-      rel: 'orders',
-      href: `http://${req.headers.host}/orders`,
-    },
-  },
-  {
     id: 'docs',
     link: {
       rel: '_docs',

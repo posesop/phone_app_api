@@ -14,16 +14,18 @@ services:
   phones:
     command: npm run start:dev
     volumes:
-      - ./phones:/usr/src/app/phones
-      - ./phones/package.json:/usr/src/app/phones/package.json
-      - ./phones/server.js:/usr/src/app/phones/server.js
+      - ./phones:/usr/src/app
+      - ./phones/package.json:/usr/src/app/package.json
+      - ./phones/server.js:/usr/src/app/server.js
     depends_on:
       - mysql
   orders:
+    environment:
+      PHONES_HOST: http://phones:3000
     command: npm run start:dev
     volumes:
-      - ./orders:/usr/src/app/orders
-      - ./orders/package.json:/usr/src/app/orders/package.json
-      - ./orders/server.js:/usr/src/app/orders/server.js
+      - ./orders:/usr/src/app
+      - ./orders/package.json:/usr/src/app/package.json
+      - ./orders/server.js:/usr/src/app/server.js
     depends_on:
       - mysql

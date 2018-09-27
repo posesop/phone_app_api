@@ -4,7 +4,7 @@ services:
     image: mysql:5.7
   phones:
     build:
-      context: .
+      context: ./phones
       dockerfile: Dockerfile
     env_file:
       - ./phones/.env
@@ -12,7 +12,7 @@ services:
       - "8080:3000"
   orders:
     build:
-      context: .
+      context: ./orders
       dockerfile: Dockerfile
     env_file:
       - ./orders/.env

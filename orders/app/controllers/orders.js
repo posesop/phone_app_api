@@ -14,6 +14,7 @@ exports.postOrder = async (order) => {
       ...order,
       phones,
     };
+    console.log(JSON.stringify(result, null, 2));
     log.debug(`DEBUG: Method controller postOrder, OUTPUT - Result: ${JSON.stringify(result, null, 2)}`);
     return result;
   } catch (error) {
