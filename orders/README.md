@@ -2,8 +2,6 @@
 
 
 
-![nodei.co](https://nodei.co/npm/orders_api.png?downloads=true&downloadRank=true&stars=true)
-
 ## Features
 
  Orders REST API.

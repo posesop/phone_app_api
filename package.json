@@ -5,7 +5,7 @@
   "scripts": {
     "test": "cd ./phones && npm run test && cd ./orders && npm run test",
     "coverage": "cd ./phones && npm run coverage && cd ./orders && npm run coverage",
-    "readme": "node-readme && git add README.md"
+    "readme": "node-readme && git add README.md && cd ./phones && npm run readme && cd ../orders && npm run readme"
   },
   "repository": {
     "type": "git",

@@ -2,8 +2,6 @@
 
 This is the phone management application
 
-![nodei.co](https://nodei.co/npm/phone_app_api.png?downloads=true&downloadRank=true&stars=true)
-
 ## Requirements
 - [Docker](https://www.docker.com/)
 
@@ -36,7 +34,7 @@ Now you can acces:
 
  - **npm run test** : `cd ./phones && npm run test && cd ./orders && npm run test`
  - **npm run coverage** : `cd ./phones && npm run coverage && cd ./orders && npm run coverage`
- - **npm run readme** : `node-readme && git add README.md`
+ - **npm run readme** : `node-readme && git add README.md && cd ./phones && npm run readme && cd ../orders && npm run readme`
 
 ## Dependencies
 

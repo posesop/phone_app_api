@@ -2,8 +2,6 @@
 
 Phones API
 
-![nodei.co](https://nodei.co/npm/phones_api.png?downloads=true&downloadRank=true&stars=true)
-
 ## Features
 
  Phones REST API.
