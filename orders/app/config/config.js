@@ -13,6 +13,6 @@ module.exports = {
     successMessage: 'I\'m alive, for now...',
   },
   phones: {
-    host: process.env.PHONES_HOST || 'http://localhost:8080';
+    host: process.env.PHONES_HOST || 'http://localhost:8080',
   },
 };
