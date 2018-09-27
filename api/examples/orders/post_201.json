@@ -1,0 +1,25 @@
+{
+  "data": {
+    "price": 1931,
+    "customer": {
+      "name": "Victor",
+      "surname": "Apellido",
+      "email": "email@gmail.com"
+    },
+    "phones": [{
+        "id": 11,
+        "name": "Iphone XS Max",
+        "description": "Apple iPhone Xs Max 512GB",
+        "price": 1221,
+        "image": "https://static.phonehouse.es/res/autoimg/202704_spc_200_176_qhigh_product.jpg"
+      },
+      {
+        "id": 12,
+        "name": "Samsung Galaxy Note9",
+        "description": "Samsung Galaxy Note9 512GB + 8GB RAM",
+        "price": 710,
+        "image": "https://static.phonehouse.es/res/autoimg/154944_spc_200_176_qhigh_product.jpg"
+      }
+    ]
+  }
+}

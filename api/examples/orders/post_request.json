@@ -1,0 +1,8 @@
+{
+  "customer": {
+    "name": "Victor",
+    "surname": "Apellido",
+    "email": "email@gmail.com"
+  },
+  "phones": ["Iphone XS Max", "Samsung Galaxy Note9"]
+}

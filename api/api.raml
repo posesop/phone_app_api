@@ -9,6 +9,7 @@ resourceTypes:
 
 uses:
   Phones: types/phones.raml
+  Order: types/order.raml
 
 /phones:
   description: Service for managing phones.
@@ -24,3 +25,21 @@ uses:
             properties: 
               data:
                 type: Phones.Phones
+
+/orders:
+  description: Service for managing orders.
+  post:
+    description: Resource for creating a new order.
+    body:
+      application/json:
+        example: !include examples/orders/post_request.json
+        type: Order.OrderBody
+    responses: 
+      201:
+        body: 
+          application/json:
+            example: !include examples/orders/post_201.json
+            type: object
+            properties: 
+              data:
+                type: Order.OrderResponse

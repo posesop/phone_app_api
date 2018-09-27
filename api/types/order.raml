@@ -1,0 +1,39 @@
+#%RAML 1.0 Library
+
+uses: 
+  Phone: phone.raml
+  
+types: 
+  OrderBody:
+    type: object
+    properties:
+      customer:
+        type: object
+        properties:
+          name:
+            type: string
+          surname:
+            type: string
+          email:
+            type: number
+      phones:
+        type: array
+        items: string
+
+  OrderResponse:
+    type: object
+    properties:
+      price:
+        type: number
+      customer:
+        type: object
+        properties:
+          name:
+            type: string
+          surname:
+            type: string
+          email:
+            type: number
+      phones:
+        type: array
+        items: Phone.Phone
