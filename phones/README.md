@@ -6,12 +6,14 @@ Phones API
 
  Phones REST API.
 
- To see API Documentation go to http://localhost:8080/_docs
 
 ## Start
 
 `$ npm start`
+
 `$ npm run start:dev`
+
+To see API Documentation go to http://localhost:8080/_docs
 
 ## Scripts
 
