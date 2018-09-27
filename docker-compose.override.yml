@@ -14,9 +14,10 @@ services:
   phones:
     command: npm run start:dev
     volumes:
-      - ./phones:/usr/src/app
       - ./phones/package.json:/usr/src/app/package.json
       - ./phones/server.js:/usr/src/app/server.js
+      - ./phones/app:/usr/src/app/app
+      - ./phones/test:/usr/src/app/test
     depends_on:
       - mysql
   orders:
@@ -24,8 +25,9 @@ services:
       PHONES_HOST: http://phones:3000
     command: npm run start:dev
     volumes:
-      - ./orders:/usr/src/app
       - ./orders/package.json:/usr/src/app/package.json
       - ./orders/server.js:/usr/src/app/server.js
+      - ./orders/app:/usr/src/app/app
+      - ./orders/test:/usr/src/app/test
     depends_on:
       - mysql
