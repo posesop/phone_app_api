@@ -4,7 +4,7 @@ const sinon = require('sinon');
 const phones = require('../../app/controllers/phones');
 const repository = require('../../app/repository');
 
-describe('Unit test categories controller', () => {
+describe('Unit test phones controller', () => {
   let getPhonesStub;
 
   beforeEach(() => {
