@@ -1,6 +1,4 @@
-const {
-  expect
-} = require('chai');
+const { expect } = require('chai');
 const sinon = require('sinon');
 const routes = require('../../app/routes');
 const validator = require('../../app/routes/middlewares/validator');
