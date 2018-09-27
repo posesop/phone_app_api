@@ -8,9 +8,9 @@ This is the phone management application
 ## Docker Services
 
   This docker compose contains
-    - MYSQL 
-    - Phones API (node.js)
-    - Orders API (node.js)
+  - MYSQL 
+  - Phones API (node.js)
+  - Orders API (node.js)
 
 
 ## Start
