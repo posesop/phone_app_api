@@ -1,10 +1,8 @@
 const sinon = require('sinon');
-const { post, get } = require('../../app/routes/sources');
-const restErrors = require('../../app/routes/restErrors');
+const { get } = require('../../app/routes/phones');
 const log = require('../../app/config/log');
 
-
-describe('Unit test for sources route', () => {
+describe('Unit test for phones route', () => {
   describe('tests for post method', () => {
     const next = sinon.stub();
     const res = {
@@ -15,7 +13,6 @@ describe('Unit test for sources route', () => {
     let logStub;
 
     beforeEach(() => {
-      checkErrorStub = sinon.stub(restErrors, 'checkError');
       logStub = sinon.stub(log, 'error');
       logStub.returns({});
     });

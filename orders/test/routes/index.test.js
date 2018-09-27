@@ -1,9 +1,14 @@
-const { expect } = require('chai');
+const {
+  expect
+} = require('chai');
 const sinon = require('sinon');
 const routes = require('../../app/routes');
+const validator = require('../../app/routes/middlewares/validator');
 const root = require('../../app/routes/root');
-const phones = require('../../app/routes/phones');
+const orders = require('../../app/routes/orders');
 const docs = require('../../app/routes/docs');
+
+const postOrderBody = require('../../app/routes/schemas/postOrderBody.json');
 
 describe('Unit test for routes', () => {
   let serverMock;
@@ -54,6 +59,11 @@ describe('Unit test for routes', () => {
         getPhones: () => {},
         postOrder: () => {},
       };
+      bodyValidatorStub = sinon.stub(validator, 'body');
+    });
+
+    afterEach(() => {
+      bodyValidatorStub.restore();
     });
 
     it('should call use from router', () => {
@@ -78,14 +88,16 @@ describe('Unit test for routes', () => {
       sinon.assert.calledWith(router.get, '/_docs', docsGetStub);
     });
 
-    it('should add the phones get route', () => {
-      const phonesGetStub = sinon.stub(phones, 'get');
+    it('should add the orders get route', () => {
+      const ordersPostStub = sinon.stub(orders, 'post');
       routes.addRoutesTo(serverMock, router, controller);
-      sinon.assert.calledWith(phonesGetStub, controller.getPhones);
+      sinon.assert.calledWith(ordersPostStub, controller.postOrder);
+      sinon.assert.calledWith(bodyValidatorStub, postOrderBody);
       sinon.assert.calledWith(
-        router.get,
-        '/phones',
-        phonesGetStub(),
+        router.post,
+        '/orders',
+        bodyValidatorStub(),
+        ordersPostStub(),
       );
     });
   });

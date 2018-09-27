@@ -1,10 +1,7 @@
-const validator = require('./middlewares/validator');
 const root = require('./root');
 const phones = require('./phones');
-const orders = require('./orders');
 const docs = require('./docs');
 
-const postOrderBody = require('./schemas/postOrderBody.json');
 
 const checkParamsMiddleware = (req, res, next) => {
   if (!req || !res || !next) {
@@ -28,12 +25,6 @@ exports.addRoutesTo = (server, router, controller) => {
   router.get(
     '/phones',
     phones.get(controller.getPhones),
-  );
-
-  router.post(
-    '/orders',
-    validator.body(postOrderBody),
-    orders.post(controller.postOrder),
   );
 
   router.applyRoutes(server);

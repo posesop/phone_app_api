@@ -6,7 +6,6 @@ const server = require('../server');
 const config = require('../app/config/config');
 const routes = require('../app/routes');
 
-
 describe('Unit test for server', () => {
   let createServerStub;
   let addRoutesToStub;

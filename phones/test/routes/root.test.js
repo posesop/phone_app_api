@@ -1,7 +1,6 @@
 const sinon = require('sinon');
 const { get } = require('../../app/routes/root');
 
-
 describe('Unit test for root route', () => {
   const req = {
     headers: {
@@ -20,12 +19,6 @@ describe('Unit test for root route', () => {
       link: {
         rel: 'phones',
         href: `http://${req.headers.host}/phones`,
-      },
-    }, {
-      id: 'orders',
-      link: {
-        rel: 'orders',
-        href: `http://${req.headers.host}/orders`,
       },
     },
     {
