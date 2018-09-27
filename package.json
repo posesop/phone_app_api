@@ -1,0 +1,24 @@
+{
+  "name": "phone_app_api",
+  "version": "1.0.0",
+  "description": "This is the phone management application",
+  "scripts": {
+    "test": "cd ./phones && npm run test && cd ./orders && npm run test",
+    "coverage": "cd ./phones && npm run coverage && cd ./orders && npm run coverage",
+    "readme": "node-readme && git add README.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/posesop/phone_app_api.git"
+  },
+  "author": "Victor Pose",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/posesop/phone_app_api/issues"
+  },
+  "homepage": "https://github.com/posesop/phone_app_api#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "node-readme": "^0.1.9"
+  }
+}
