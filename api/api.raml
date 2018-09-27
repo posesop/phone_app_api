@@ -1,0 +1,26 @@
+#%RAML 1.0
+title: Kuestions2 API
+version: 0.0.1
+description: !include docs/apiDescription.md
+
+resourceTypes: 
+  collection: !include resourceTypes/collection.raml
+  collection-item: !include resourceTypes/collection-item.raml
+
+uses:
+  Phones: types/phones.raml
+
+/phones:
+  description: Service for managing phones.
+  type: collection
+  get:
+    description: Resource for retrieving the phones list.
+    responses: 
+      200:
+        body: 
+          application/json:
+            example: !include examples/phones/get_200.json
+            type: object
+            properties: 
+              data:
+                type: Phones.Phones

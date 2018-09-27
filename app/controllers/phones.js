@@ -7,7 +7,7 @@ exports.getPhones = async () => {
     const result = await repository.getPhones();
     log.debug(`DEBUG: Method controller getPhones, OUTPUT - Result: ${JSON.stringify(result, null, 2)}`);
     return result;
-  } catch(error) {
+  } catch (error) {
     log.error('ERROR: Method controller get phones', error);
     throw error;
   }

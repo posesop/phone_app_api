@@ -1,7 +1,7 @@
 const phones = require('./phones');
-const order = require('./order');
+const orders = require('./orders');
 
 exports.init = () => ({
   getPhones: phones.getPhones,
-  postOrder: order.postOrder,
+  postOrder: orders.postOrder,
 });

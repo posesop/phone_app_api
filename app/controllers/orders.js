@@ -8,7 +8,7 @@ exports.postOrder = async (order) => {
 
     const phones = allPhones.filter(phone => order.phones.includes(phone.name));
     const price = phones.reduce((total, current) => total + current.price, 0);
-    
+
     const result = {
       price,
       ...order,

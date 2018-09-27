@@ -1,7 +1,8 @@
 const validator = require('./middlewares/validator');
 const root = require('./root');
 const phones = require('./phones');
-const order = require('./order');
+const orders = require('./orders');
+const docs = require('./docs');
 
 const postOrderBody = require('./schemas/postOrderBody.json');
 
@@ -20,14 +21,19 @@ exports.addRoutesTo = (server, router, controller) => {
   router.get('/', root.get);
 
   router.get(
-    '/phones', 
+    '/_docs',
+    docs.get,
+  );
+
+  router.get(
+    '/phones',
     phones.get(controller.getPhones),
   );
 
   router.post(
-    '/order', 
+    '/orders',
     validator.body(postOrderBody),
-    order.post(controller.postOrder),
+    orders.post(controller.postOrder),
   );
 
   router.applyRoutes(server);

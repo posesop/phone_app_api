@@ -14,5 +14,4 @@ const mysqlConnection = mysql.createConnection({
 mysqlConnection.query = util.promisify(mysqlConnection.query);
 mysqlConnection.on('error', err => log.error(err.code));
 
-exports.getPhones = () => 
-  mySqlClient.getPhones(mysqlConnection)();
+exports.getPhones = () => mySqlClient.getPhones(mysqlConnection)();

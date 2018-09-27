@@ -1,5 +1,5 @@
-const log = require('../config/log');
 const errors = require('restify-errors');
+const log = require('../config/log');
 
 exports.get = getPhones => async (req, res, next) => {
   log.debug(`DEBUG: Method route get phones, INPUT - Request: ${req}, Response: ${res}, Next: ${next}`);

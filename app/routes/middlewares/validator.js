@@ -1,4 +1,4 @@
-const errors = require('restify-errors');
+const errs = require('restify-errors');
 const Ajv = require('ajv');
 
 const sanitizeDataPath = data => (data ? `${data.replace('.', '')}.` : '');
@@ -29,14 +29,14 @@ const validateData = ajv => (schema, data, next) => {
   const valid = ajv.validate(schema, data);
   if (!valid) {
     const message = formatErrors(ajv.errors);
-    return next(new errors.BadRequestError(message));
+    return next(new errs.BadRequestError(message));
   }
   return next();
 };
 
 const validateWithSchema = (schema, data, next) => {
   const ajv = new Ajv({
-    schemaId: 'auto'
+    schemaId: 'auto',
   });
   return validateData(ajv)(schema, data, next);
 };
