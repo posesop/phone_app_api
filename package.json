@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run documentation && node server.js",
-    "start:dev": "npm run documentation && nodemon server.js",
-    "lint": "./node_modules/.bin/eslint .",
-    "documentation": "raml2html -i ./api/api.raml -o index.html"
+    "start": "cd ./phones && npm start",
+    "start:dev": "cd ./phones && npm run start:dev"
   },
   "repository": {
     "type": "git",
@@ -18,23 +16,5 @@
   "bugs": {
     "url": "https://github.com/posesop/phone_app_api/issues"
   },
-  "homepage": "https://github.com/posesop/phone_app_api#readme",
-  "devDependencies": {
-    "nodemon": "^1.18.4",
-    "eslint": "^5.6.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0"
-  },
-  "dependencies": {
-    "ajv": "^6.5.4",
-    "bunyan": "^1.8.12",
-    "mysql": "^2.16.0",
-    "raml2html": "^7.2.0",
-    "response-time": "^2.3.2",
-    "restify": "^7.2.1",
-    "restify-errors": "^6.1.1",
-    "restify-health-router": "^1.0.3",
-    "restify-router": "^0.5.0",
-    "sqlify": "^2.4.0"
-  }
+  "homepage": "https://github.com/posesop/phone_app_api#readme"
 }

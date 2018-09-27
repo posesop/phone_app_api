@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'Phone APP API',
+  name: 'Phones API',
   port: process.env.API_PORT || '8080',
   logLevel: process.env.LOG_LEVEL || 'info',
   mysql: {
